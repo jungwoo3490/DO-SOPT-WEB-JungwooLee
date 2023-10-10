@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background-color: skyblue;
+}
+
+header h1 {
+    padding: 10px 0;
+}
+
+.my_asset_container {
+    width: 100%;
+    height: 220px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.asset_box {
+    width: 80%;
+    height: 170px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: ivory;
+}
+
+.asset_box h2 {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.asset_box h1 {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.asset_inout {
+    display: flex;
+    column-gap: 20px;
+}
+
+.asset_inout img {
+    width: 25px;
+    height: 25px;
+}
+
+.asset_inout p {
+    font-size: 22px;
+}
+
+.asset_count {
+    display: flex;
+    column-gap: 10px;
+}
+
+.asset_in {
+    color: blue;
+}
+
+.asset_out {
+    color: red;
+}
+
+.asset_history_container {
+    padding-top: 15px;
+}
+
+.date_selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.date_selector img {
+    width: 30px;
+}
+
+.date {
+    font-size: 22px;
+}
+
+.history_list_header {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.history_filter {
+    display: flex;
+    column-gap: 10px;
+}
+
+.history_list {
+    margin-top: 15px;
+    border-top: 2px solid lightgray;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    height: 275px;
+    overflow-y: auto;
+}
+
+.history_item {
+    width: 100%;
+    height: 50px;
+    flex: 0 0 auto;
+    background-color: gold;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.history_category {
+    width: 70px;
+}
+
+.history_title {
+    width: 180px;
+}
+
+.history_asset {
+    font-size: 18px;
+}
+
+.plus {
+    color: blue;
+}
+
+.minus {
+    color: red;
+}
+
+footer {
+    width: 100%;
+    height: 58px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}

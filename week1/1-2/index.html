@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>정우의 가계부</title>
+</head>
+<body>
+    <header>
+        <h1>정우의 가계부</h1>
+    </header>
+    <div class="my_asset_container">
+        <div class="asset_box">
+            <h2>나의 자산</h2>
+            <h1>0</h1>
+            <div class="asset_inout">
+                <div class="asset_count">
+                    <img src="assets/plus_icon.png" alt="">
+                    <p class="asset_in">300000</p>
+                </div>
+                <div class="asset_count">
+                    <img src="assets/minus_icon.png" alt="">
+                    <p class="asset_out">300000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="asset_history_container">
+        <div class="date_selector">
+            <img src="assets/arrow_left.png" alt="">
+            <p class="date">10월 1일</p>
+            <img src="assets/arrow_right.png" alt="">
+        </div>
+        <div class="history_list_container">
+            <div class="history_list_header">
+                <span>내역 리스트</span>
+                <div class="history_filter">
+                    <div>
+                        <input type="checkbox" name="in" checked>
+                        <label for="in">수입</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="out" checked>
+                        <label for="out">지출</label>
+                    </div>
+                </div>
+            </div>
+            <div class="history_list">
+                <div class="history_item">
+                    <p class="history_category">취미</p>
+                    <h3 class="history_title">노는게제일조아</h3>
+                    <p class="history_asset plus">+300000</p>
+                </div>
+                <div class="history_item">
+                    <p class="history_category">식비</p>
+                    <h3 class="history_title">냠냠냠</h3>
+                    <p class="history_asset minus">-10000</p>
+                </div>
+                <div class="history_item">
+                    <p class="history_category">월급</p>
+                    <h3 class="history_title">과외비당</h3>
+                    <p class="history_asset plus">+200000</p>
+                </div>
+                <div class="history_item">
+                    <p class="history_category">쇼핑</p>
+                    <h3 class="history_title">흰색 신발 사기</h3>
+                    <p class="history_asset minus">-100000</p>
+                </div>
+                <div class="history_item">
+                    <p class="history_category">식비</p>
+                    <h3 class="history_title">불닭볶음면</h3>
+                    <p class="history_asset minus">-1500</p>
+                </div>
+                <div class="history_item">
+                    <p class="history_category">취미</p>
+                    <h3 class="history_title">노는게제일조아</h3>
+                    <p class="history_asset plus">+300000</p>
+                </div>
+                <div class="history_item">
+                    <p class="history_category">식비</p>
+                    <h3 class="history_title">냠냠냠</h3>
+                    <p class="history_asset minus">-10000</p>
+                </div>
+                <div class="history_item">
+                    <p class="history_category">월급</p>
+                    <h3 class="history_title">과외비당</h3>
+                    <p class="history_asset plus">+200000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="./assets/add_icon.png" alt="">
+    </footer>
+</body>
+</html>
