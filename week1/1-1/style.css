@@ -11,8 +11,29 @@ body {
     margin: 0;
 }
 
+.top_button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 999;
+    border: 1px solid black;
+    border-radius: 999px;
+}
+
+.top_button img {
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+}
+
 header {
-    background-color: skyblue;
+    background-color: mediumspringgreen;
+    text-align: center;
 }
 
 header h2 {
@@ -25,7 +46,7 @@ header h2 {
     flex-direction: row;
     column-gap: 15px;
     width: 100%;
-    background-color: lightgray;
+    background-color: beige;
     margin-bottom: 15px;
     overflow: auto;
     white-space: nowrap;
@@ -41,7 +62,7 @@ nav {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    background-color: lightgray;
+    background-color: beige;
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;
     margin-bottom: 15px;
@@ -71,7 +92,7 @@ nav ul {
 .nav_item:hover {
     cursor: pointer;
     text-decoration: underline;
-    color: yellow;
+    color: teal;
 }
 
 .image_section {
@@ -82,8 +103,9 @@ nav ul {
 
 .section_title {
     width: 100%;
-    background-color: aqua;
+    background-color: mediumspringgreen;
     position: sticky;
+    padding-left: 50px;
     top: 0;
 }
 
@@ -105,6 +127,7 @@ nav ul {
 .section_1_image_container img {
     width: 263px;
     height: 263px;
+    object-fit: cover;
     /* border: 1px solid green; */
 }
 
@@ -185,7 +208,7 @@ nav ul {
 }
 
 footer {
-    background-color: gray;
+    background-color: beige;
     height: 100px;
     line-height: 100px;
     text-align: center;
