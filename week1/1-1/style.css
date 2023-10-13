@@ -128,13 +128,11 @@ nav ul {
     width: 263px;
     height: 263px;
     object-fit: cover;
-    /* border: 1px solid green; */
 }
 
 .section_2_image_container {
     margin-top: 50px;
     margin-bottom: 50px;
-    /* border: 1px solid blue; */
     width: 1100px;
     display: flex;
     column-gap: 20px;
@@ -144,7 +142,6 @@ nav ul {
     flex: 0 0 auto;
     width: 540px;
     height: 540px;
-    /* border: 1px solid darkblue; */
 }
 
 .section_2_image_container_left img {
