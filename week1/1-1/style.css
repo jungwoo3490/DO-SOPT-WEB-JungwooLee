@@ -4,6 +4,23 @@
 
 body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 1.25rem 0;
+}
+
+.section_title > h2 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
 }
 
 body {
@@ -12,22 +29,22 @@ body {
 }
 
 .top_button {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 3.125rem;
+    bottom: 3.125rem;
     z-index: 999;
-    border: 1px solid black;
+    border: 0.0625rem solid black;
     border-radius: 999px;
 }
 
 .top_button img {
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
     object-fit: cover;
 }
 
@@ -37,52 +54,52 @@ header {
 }
 
 header h2 {
-    padding: 15px 0;
+    padding: 0.9375rem 0;
 }
 
 .preview_section {
-    padding: 40px;
+    padding: 2.5rem;
     display: flex;
     flex-direction: row;
-    column-gap: 15px;
+    column-gap: 0.9375rem;
     width: 100%;
     background-color: beige;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
     overflow: auto;
     white-space: nowrap;
 }
 
 .preview_section img {
     flex: 0 0 auto;
-    width: 270px;
-    height: 400px;
+    width: 16.875rem;
+    height: 25rem;
 }
 
 nav {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 3.125rem 0;
     text-align: center;
     background-color: beige;
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
-    margin-bottom: 15px;
+    border-top: 0.125rem solid gray;
+    border-bottom: 0.125rem solid gray;
+    margin-bottom: 0.9375rem;
 }
 
 nav ul {
     display: flex;
+    padding: 0;
     list-style-type: none;
 }
 
 .nav_title {
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-weight: 600;
 }
 
 .nav_list {
-    margin-top: 30px;
+    margin-top: 1.875rem;
     display: flex;
     justify-content: center;
-    column-gap: 30px;
+    column-gap: 1.875rem;
 }
 
 .nav_item {
@@ -105,43 +122,41 @@ nav ul {
     width: 100%;
     background-color: mediumspringgreen;
     position: sticky;
-    padding-left: 50px;
+    padding-left: 3.125rem;
     top: 0;
 }
 
 .section_title h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 0.625rem 0;
 }
 
 .section_1_image_container {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 1400px;
+    margin: 3.125rem 0;
+    width: 100vw;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 1.25rem;
+    row-gap: 1.25rem;
 }
 
 .section_1_image_container img {
-    width: 263px;
-    height: 263px;
+    width: 16.4375rem;
+    height: 16.4375rem;
     object-fit: cover;
 }
 
 .section_2_image_container {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 1100px;
+    margin: 3.125rem 0;
+    width: 68.75rem;
     display: flex;
-    column-gap: 20px;
+    column-gap: 1.25rem;
 }
 
 .section_2_image_container_left {
     flex: 0 0 auto;
-    width: 540px;
-    height: 540px;
+    width: 33.75rem;
+    height: 33.75rem;
 }
 
 .section_2_image_container_left img {
@@ -154,24 +169,23 @@ nav ul {
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 15px;
+    row-gap: 0.9375rem;
     justify-content: space-between;
 }
 
 .section_2_image_container_right img {
-    width: 263px;
-    height: 263px;
+    width: 16.4375rem;
+    height: 16.4375rem;
 }
 
 .section_3_image_container {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 1100px;
-    height: 540px;
+    margin: 3.125rem 0;
+    width: 68.75rem;
+    height: 33.75rem;
     display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-columns: 25% 25% 25% 25%;
-    gap: 10px;
+    grid-template-rows:  repeat(4, 25%);
+    grid-template-columns: repeat(4, 25%);
+    gap: 0.625rem;
 }
 
 .item {
@@ -206,7 +220,12 @@ nav ul {
 
 footer {
     background-color: beige;
-    height: 100px;
-    line-height: 100px;
+    height: 6.25rem;
+    line-height: 6.25rem;
     text-align: center;
+}
+
+footer > p {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
