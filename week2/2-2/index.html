@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>정우의 가계부</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">정우의 가계부</h1>
+    </header>
+    <main>
+        <container class="my_asset_container">
+            <div class="asset_box">
+                <h2>나의 자산</h2>
+                <p class="total_asset"></p>
+                <div class="asset_inout">
+                    <div class="asset_count">
+                        <img src="assets/plus_icon.png" alt="수입 아이콘">
+                        <p class="asset_in"></p>
+                    </div>
+                    <div class="asset_count">
+                        <img src="assets/minus_icon.png" alt="지출 아이콘">
+                        <p class="asset_out"></p>
+                    </div>
+                </div>
+            </div>
+        </container>
+        <container class="asset_history_container">
+            <div class="date_selector">
+                <img src="assets/arrow_left.png" alt="왼쪽 화살표 버튼">
+                <p class="date">10월 11일</p>
+                <img src="assets/arrow_right.png" alt="오른쪽 화살표 버튼">
+            </div>
+            <div class="history_list_container">
+                <div class="history_list_header">
+                    <span>내역 리스트</span>
+                    <div class="history_filter">
+                        <div>
+                            <input type="checkbox" name="in" checked>
+                            <label for="in">수입</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="out" checked>
+                            <label for="out">지출</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="history_list">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </container>
+    </main>
+    <footer>
+        <button type="button" class="add_button">
+            <img src="./assets/add_icon.png" alt="추가 버튼">
+        </button>
+    </footer>
+    <div class="modal">
+        <div class="modal_header">
+            <h2 class="modal_title">내역 추가</h2>
+            <div class="in_out_filter">
+                <button class="asset_button in active">수입</button>
+                <button class="asset_button out">지출</button>
+            </div>
+        </div>
+        <div class="option_list">
+            <h3>종류</h3>
+            <select name="" class="category_select">
+                <option value="allowance" selected>용돈</option>
+                <option value="salary">월급</option>
+            </select>
+        </div>
+        <div class="option_list">
+            <h3>금액</h3>
+            <input type="text" class="amount_input">
+        </div>
+        <div class="option_list">
+            <h3>내용</h3>
+            <input type="text" class="content_input">
+        </div>
+        <button class="submit_button">저장하기</button>
+        <button class="close_button">닫기</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
