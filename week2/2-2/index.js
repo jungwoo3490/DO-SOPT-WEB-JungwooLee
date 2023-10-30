@@ -133,6 +133,7 @@ const addItem = () => {
 
     const list = document.querySelector("ul");
     list.appendChild(newItem);
+    alert("저장되었습니다");
 
     categorySelect.selectedIndex = 0;
     document.querySelector(".amount_input").value = "";
