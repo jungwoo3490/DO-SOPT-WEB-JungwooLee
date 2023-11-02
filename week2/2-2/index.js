@@ -90,7 +90,7 @@ const updateAsset = () => {
         minusAssetTotal += parseInt(minusAssetElements[i].textContent);
     }
 
-    total = plusAssetTotal + minusAssetTotal;
+    const total = plusAssetTotal + minusAssetTotal;
 
     const assetInElement = document.querySelector('.asset_in');
     const assetOutElement = document.querySelector('.asset_out');
