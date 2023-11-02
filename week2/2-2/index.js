@@ -16,7 +16,7 @@ const HISTORY_LIST = [
         category: "식비",
         title: "노티드 도넛",
         amount: 10500,
-        type: "minus"
+        type: "loss"
     },
     {
         category: "용돈",
@@ -26,6 +26,39 @@ const HISTORY_LIST = [
     }
 ];
 
+const createItem = (isIncome, category, title, amount) => {
+    const historyAssetClass = isIncome ? "plus" : "minus";
+    const historyItemClass = isIncome ? "income" : "loss";
+    
+    const newItem = document.createElement("li");
+    newItem.classList.add("history_item");
+    newItem.classList.add(`${historyItemClass}`);
+    
+    newItem.innerHTML = `
+        <button type="button">
+            <img src="assets/x_icon.png" alt="x 버튼" class="x_icon">
+        </button>
+        <p class="history_category">${category}</p>
+        <p class="history_title">${title}</p>
+        <p class="history_asset ${historyAssetClass}">${isIncome ? "+" : "-"}${amount}</p>
+    `;
+    
+    const list = document.querySelector("ul");
+    list.appendChild(newItem);
+
+    const xButtons = document.querySelectorAll('.x_icon');
+
+    xButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const listItem = button.closest('.history_item');
+            if (listItem) {
+                listItem.remove();
+                updateAsset();
+            }
+        });
+    });
+}
+
 
 const initListItem = () => {
 
@@ -33,39 +66,8 @@ const initListItem = () => {
     totalAssetElement.textContent = INIT_BALANCE;
 
     HISTORY_LIST.forEach(item => {
-
         const isIncome = item.type === "income" ? true : false;
-    
-        const historyAssetClass = isIncome ? "plus" : "minus";
-        const historyItemClass = isIncome ? "income" : "loss";
-    
-        const newItem = document.createElement("li");
-        newItem.classList.add("history_item");
-        newItem.classList.add(`${historyItemClass}`);
-    
-        newItem.innerHTML = `
-            <button type="button">
-                <img src="assets/x_icon.png" alt="x 버튼" class="x_icon">
-            </button>
-            <p class="history_category">${item.category}</p>
-            <p class="history_title">${item.title}</p>
-            <p class="history_asset ${historyAssetClass}">${isIncome ? "+" : "-"}${item.amount}</p>
-        `;
-    
-        const list = document.querySelector("ul");
-        list.appendChild(newItem);
-
-        const xButtons = document.querySelectorAll('.x_icon');
-
-        xButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const listItem = button.closest('.history_item');
-                if (listItem) {
-                    listItem.remove();
-                    updateAsset();
-                }
-            });
-        });
+        createItem(isIncome, item.category, item.title, item.amount);
     });
 }
 
@@ -107,32 +109,15 @@ const addItem = () => {
 
     const categorySelect = document.querySelector(".category_select");
     const selectedOption = categorySelect.options[categorySelect.selectedIndex];
-    const categoryText = selectedOption.textContent;
+    const category = selectedOption.textContent;
 
-    const amountInput = document.querySelector(".amount_input").value;
-    const contentInput = document.querySelector(".content_input").value;
+    const amount = document.querySelector(".amount_input").value;
+    const title = document.querySelector(".content_input").value;
 
     const inButton = document.querySelector(".asset_button.in");
     const isIncome = inButton.classList.contains("active");
 
-    const historyAssetClass = isIncome ? "plus" : "minus";
-    const historyItemClass = isIncome ? "income" : "loss";
-
-    const newItem = document.createElement("li");
-    newItem.classList.add("history_item");
-    newItem.classList.add(`${historyItemClass}`);
-
-    newItem.innerHTML = `
-        <button type="button">
-            <img src="assets/x_icon.png" alt="x 버튼" class="x_icon">
-        </button>
-        <p class="history_category">${categoryText}</p>
-        <p class="history_title">${contentInput}</p>
-        <p class="history_asset ${historyAssetClass}">${isIncome ? "+" : "-"}${amountInput}</p>
-    `;
-
-    const list = document.querySelector("ul");
-    list.appendChild(newItem);
+    createItem(isIncome, category, title, amount);
     alert("저장되었습니다");
 
     categorySelect.selectedIndex = 0;
